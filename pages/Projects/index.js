@@ -2,7 +2,7 @@ import React from 'react'
 
 const index = () => {
   return (
-    <div>indexx</div>
+    <div className='dark:bg-black' >indexx</div>
   )
 }
 
