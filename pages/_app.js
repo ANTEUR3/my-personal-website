@@ -5,7 +5,7 @@ import { ThemeProvider } from "next-themes";
 export default function App({ Component, pageProps }) {
   return (
     <ThemeProvider attribute="class" defaultTheme="system">
-      <Layoute className='dark:bg-black'>
+      <Layoute className=''>
         <Component {...pageProps} />
       </Layoute>
     </ThemeProvider>

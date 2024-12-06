@@ -15,8 +15,8 @@ const HomeFooter = () => {
 
         </div>
         <div className="col-span-1 -red-400 flex justify-start md:justify-center items-center gap-x-4 pr-[16px]">
-            <button className='rounded-lg px-3 py-2 shadow-xl dark:bg-blue-800 dark:text-white font-semibold hover:-translate-y-2 hover:scale-105 transition-transform duration-300 ease-out '>Projects</button>
-            <button className='rounded-lg px-3 py-2 shadow-xl dark:bg-blue-800 dark:text-white font-semibold hover:-translate-y-2 hover:scale-105 transition-transform duration-300 ease-out '>Contact me</button>
+            <button className='rounded-lg px-3 py-2 shadow-xl bg-gray-900 text-white dark:bg-blue-800 dark:text-white font-semibold hover:-translate-y-2 hover:scale-105 transition-transform duration-300 ease-out '>Projects</button>
+            <button className='rounded-lg px-3 py-2 shadow-xl bg-gray-900 text-white dark:bg-blue-800 dark:text-white font-semibold hover:-translate-y-2 hover:scale-105 transition-transform duration-300 ease-out '>Contact me</button>
         </div>
 
     </div>

@@ -25,7 +25,7 @@ const navFont = Signika_Negative({
 
 export default function Home() {
   return (
-    <div className="relative min-h-screen pb-4 flex flex-col justify-center items-center ">
+    <div className="relative min-h-screen pb-4 flex flex-col pt-[20px] md:pt-0 justify-center items-center ">
       
 <GeneralInformations />      
     
