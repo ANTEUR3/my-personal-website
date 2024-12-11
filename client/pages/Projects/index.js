@@ -1,4 +1,5 @@
 import ProjectsIndex from '@/components/Projects/ProjectsIndex';
+import WaitingData from '@/components/WaitingData';
 import supabase from '@/config/SupaBaseClient';
 import React from 'react'
 import { useState, useEffect } from 'react';
@@ -25,10 +26,11 @@ const index = () => {
     useEffect(()=>{console.log(projects)},[projects])
  
   return (
-    <div className='relative min-h-screen w-full bg-slate-100 dark:bg-slate-950 lg:pt-[100px]' >
+    <div className='relative min-h-screen w-full bg-slate-50 dark:bg-slate-900 lg:pt-[100px]' >
+
       {projects.length >0?
       <ProjectsIndex Projects={projects} />
-      :'no data'}
+      :<WaitingData />}
         
         
     </div>

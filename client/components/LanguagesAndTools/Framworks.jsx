@@ -24,14 +24,14 @@ const Framworks = () => {
             <div className="flex justify-start items-center lg:items-start gap-x-5 border border-gray-500 w-full rounded-lg pl-2 py-1">
             <FaNodeJs   className='lg:w-[100px] lg:h-[100px] md:w-[50px] md:h-[50px] w-[40px] h-[40px] dark:text-blue-500' />
                 <div className='flex flex-col justify-start items-start lg:gap-y-1 pt-3'>
-                    <p className='lg:text-xl font-semibold dark:text-white '>PHP</p>
+                    <p className='lg:text-xl font-semibold dark:text-white '>Node.js</p>
                     <p className='w-3/4 text-gray-700 dark:text-gray-500'>I can use PHP to build web applications with Laravel and handle Mysql databases </p>
                 </div>
             </div>
             <div className="flex justify-start items-center lg:items-start gap-x-5 border border-gray-500 w-full rounded-lg pl-2 py-1">
             <RiTailwindCssFill   className='lg:w-[100px] lg:h-[100px] md:w-[50px] md:h-[50px] w-[40px] h-[40px] dark:text-blue-500' />
                 <div className='flex flex-col justify-start items-start lg:gap-y-1 pt-3'>
-                    <p className='lg:text-xl font-semibold dark:text-white '>Java</p>
+                    <p className='lg:text-xl font-semibold dark:text-white '>Tailwindcss</p>
                     <p className='w-3/4 text-gray-700 dark:text-gray-500'> i use java when i want to use OOP Programming or complexes algorithms </p>
                 </div>
             </div>
