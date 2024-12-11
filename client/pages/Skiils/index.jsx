@@ -3,7 +3,7 @@ import supabase from '@/config/SupaBaseClient'
 
 const index = () => {
 
-    const [skills,setSkills]=useState();
+    const [skills,setSkills]=useState([]);
     useEffect(()=>{
         const fetchSkills= async ()=>{
             const {data,error}=await supabase
@@ -23,13 +23,10 @@ const index = () => {
     },[])
     useEffect(()=>{console.log(skills)},[skills])
   return (
-    <div className='relative min-h-screen w-full ' >
-      
-    <div className="absolute inset-0 bg-white dark:hidden">
-    </div>
-
-    <div className="absolute inset-0 bg-black hidden dark:block">
-    </div>
+    <div className='relative min-h-screen w-full dark:bg-slate-900 bg-slate-100 pt-10 ' >
+      {skills.length>0?
+       skills[0].Name
+      :''}
     
 </div>
   )

@@ -32,28 +32,24 @@ export default function Home() {
   return (
     <div className="relative w-full min-h-screen pb-4 flex flex-col pt-[20px] md:pt-0 justify-center items-center ">
       
-        
-
          <div className="dark:hidden relative h-screen w-full">
-         <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-600 ">
-          <div className="absolute inset-0   bg-center bg-[url('/images/gplay.png')] backdrop-blur-md "></div>
+             <div className="absolute inset-0 bg-gradient-to-br from-gray-100 via-gray-300 to-gray-600 ">
+                   <div className="absolute inset-0   bg-center bg-[url('/images/gplay.png')] backdrop-blur-md ">
+                   </div>
     
+              </div>
+              <GeneralInformations /> 
           </div>
-         <GeneralInformations /> 
-
-         </div>
          
-    <div className="hidden relative dark:block h-screen w-full">
-    <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-800 hidden dark:block">
+          <div className="hidden relative dark:block h-screen w-full">
+              <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-slate-800 hidden dark:block">
             
-            <div className="absolute inset-0  opacity-10 bg-center bg-[url('/images/gplay.png')] backdrop-blur-md dark:block hidden"></div>
+                   <div className="absolute inset-0  opacity-10 bg-center bg-[url('/images/gplay.png')] backdrop-blur-md dark:block hidden">
+                   </div>
       
-            </div>
-            <GeneralInformations /> 
-
-    </div>
-         
-    
+              </div>
+              <GeneralInformations /> 
+         </div>
 
        <LanguagesAndTools />
       </div>

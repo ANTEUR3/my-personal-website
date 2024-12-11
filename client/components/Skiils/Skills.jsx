@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Skills = () => {
+const Skills = ({Skills}) => {
   return (
-    <div className='z-[100] text-black' >
+    <div className='' >
         
     </div>
   )
