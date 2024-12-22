@@ -7,7 +7,7 @@ const Layoute = ({children}) => {
     <div className={`content --font-sofia`}>
         <NavBar/>
         {children}
-       
+        
     </div>
   )
 }
