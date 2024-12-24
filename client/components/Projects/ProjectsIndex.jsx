@@ -11,25 +11,32 @@ const ProjectsIndex = ({ Projects,projectsSkills }) => {
       return (
         <div
           key={project.id}
-          className={`col-span-1 rounded-lg bg-cover    relative group flex justify-center items-center   cursor-pointer overflow-hidden h-[500px] md:h-[350px] lg:h-[300px] `}
+          className={`col-span-1 rounded-lg bg-cover gap-y-3 pr-2    relative group flex flex-col justify-end items-start border-2 border-black
+               cursor-pointer overflow-hidden h-[500px] md:h-[350px] lg:h-[300px] `}
           style={{ backgroundImage: `url(${project.PrincipaleImage})` }}
         >
-          <div className=" bg-gradient-to-t from-gray-700 via-gray-600  to-transparent w-full h-[53%] bottom-0 absolute group-hover:h-[100%]  flex "></div>
-
-          <div className="absolute   bottom-[48px]  left-4 transition-all text-yellow-400 font-bold duration-1000 group-hover:translate-y-[100px] ">
-            {project.Name}
-          </div>
+          <div className=" bg-gradient-to-t from-gray-500 via-gray-300  to-transparent w-full h-[53%] bottom-0 absolute group-hover:h-[100%] hidden  group-hover:flex "></div>
+           <div className="absolute pb-2 translate-y-[200px] group-hover:translate-y-0 transition-transform duration-700 ease-in-out pr-2">
+               <div className="relative gap-y-2 flex flex-col justify-end items-start pl-4">
+                    <div className="   z-2 lg:text-lg   transition-all text-blue-700 font-semibold duration-1000 w-full overflow-hidden h-[25px]   ">
+                         {project.Name}
+                     </div>
+                     <div className="font-semibold lg:text-lg">
+                         {project.Description}
+                     </div>
           
-          <div className="absolute flex justify-start items-center gap-x-2  bottom-[10px]  left-4 transition-all text-gray-600 font-bold duration-1000 group-hover:translate-y-14   ">
-            {skills.map((skill,index)=>{
-              return <p key={index} className="px-2 py-1 rounded-lg text-sm bg-slate-200">{skill.Skills.Name}</p>
-            })
-            
-           }
-          </div>
-          <div className="absolute w-full flex justify-center items-center py-1  -translate-y-[200px] group-hover:translate-y-0 transition-transform duration-1000 ease-in-out">
-              <button className="px-3 py-2  bg-green-600 text-white font-semibold  rounded-lg hover:bg-green-400">Detaills</button>
-          </div>
+                     <div className=" flex justify-start items-center gap-x-2     transition-all text-gray-600 font-bold duration-1000   ">
+                        {skills.map((skill,index)=>{
+                             return <p key={index} className="px-2 py-1 rounded-lg text-sm bg-slate-200">{skill.Skills.Name}</p>
+                        })
+                         }
+                     </div>
+         
+              
+          
+                </div>
+            </div>
+          
         </div>
       );
     });
