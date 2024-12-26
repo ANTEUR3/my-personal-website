@@ -10,12 +10,15 @@ const ProjectsIndex = ({ Projects,projectsSkills }) => {
       console.log(skills,project.id)
       return (
         <div
+          onClick={()=>window.location.href=`/Projects/${project.id}`}
           key={project.id}
           className={`col-span-1 rounded-lg bg-cover gap-y-3 pr-2    relative group flex flex-col justify-end items-start border-2 border-black
                cursor-pointer overflow-hidden h-[500px] md:h-[350px] lg:h-[300px] `}
-          style={{ backgroundImage: `url(${project.PrincipaleImage})` }}
+          //style={{ backgroundImage: `url(${project.PrincipaleImage})` }}
         >
+          <img className="absolute inset-0 w-full h-[300px] group-hover:h-[250px] transition-all duration-700 ease-out" src={project.PrincipaleImage} />
           <div className=" bg-gradient-to-t from-gray-500 via-gray-300  to-transparent w-full h-[53%] bottom-0 absolute group-hover:h-[100%] hidden  group-hover:flex "></div>
+           
            <div className="absolute pb-2 translate-y-[200px] group-hover:translate-y-0 transition-transform duration-700 ease-in-out pr-2">
                <div className="relative gap-y-2 flex flex-col justify-end items-start pl-4">
                     <div className="   z-2 lg:text-lg   transition-all text-blue-700 font-semibold duration-1000 w-full overflow-hidden h-[25px]   ">
