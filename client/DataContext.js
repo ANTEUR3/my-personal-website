@@ -7,6 +7,7 @@ export const appContext = createContext();
 export const DataContextProvider = ({ children }) => {
   const [projects,setProjects]=useState([]);
   const [projectsSkills,setProjectsSkills]=useState([]);
+  const [projectsImages,setProjectsImages]=useState([]);
     useEffect(()=>{
         const fetchProjects= async ()=>{
             const {data,error}=await supabase
@@ -35,12 +36,27 @@ export const DataContextProvider = ({ children }) => {
            setProjectsSkills(data)
   
           }
+          const ProjectsImages= async ()=>{
+            const {data,error}=await supabase
+            .from('ProjectImages')
+            .select()
+      
+  
+           if(error){
+              console.log(error)
+           }
+          
+           setProjectsImages(data)
+  
+          }
         fetchProjects();
         ProjectsSkills();
+        ProjectsImages();
+        
     },[])
- 
+    useEffect(()=>{console.log(projectsImages)},[projectsImages])
    return (
-     <appContext.Provider value={{projects,projectsSkills}}>
+     <appContext.Provider value={{projects,projectsSkills,projectsImages}}>
        {children}
      </appContext.Provider>
    );

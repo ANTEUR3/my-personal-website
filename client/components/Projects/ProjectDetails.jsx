@@ -1,7 +1,10 @@
 import React, { useMemo } from 'react'
 import { FaGithub } from "react-icons/fa";
 import Link from 'next/link';
-const ProjectDetails = ({project,projectSkills}) => {
+const ProjectDetails = ({project,projectSkills,Image}) => {
+
+
+  
 
   const Skills=useMemo(()=>{
     return projectSkills.map((Skill,key)=>{
@@ -12,7 +15,7 @@ const ProjectDetails = ({project,projectSkills}) => {
   },[projectSkills])
   console.log(project)
   return (
-    <div className='px-3 w-[70%] '>
+    <div className={`px-3 w-[70%] ${Image!=null?'opacity-10':'opacity-100'} `}>
       <div className='w-full  border-b-[0.7px] border-gray-300 flex flex-col justify-start items-start gap-y-2 pt-2 pb-5 '>
         <h1 className='font-bold text-3xl'>{project.Name}</h1>
         <h1 className=' text-gray-800'>{project.Title}</h1>

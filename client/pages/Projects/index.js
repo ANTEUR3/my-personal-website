@@ -7,9 +7,6 @@ import { useState, useEffect } from 'react';
 const index = () => {
   
  
-
- 
-
   const [projects,setProjects]=useState([]);
   const [projectSkills,setProjectsSkills]=useState([]);
 
