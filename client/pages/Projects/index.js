@@ -1,7 +1,8 @@
 import ProjectsIndex from '@/components/Projects/ProjectsIndex';
 import WaitingData from '@/components/WaitingData';
 import supabase from '@/config/SupaBaseClient';
-import React from 'react'
+import { appContext } from '@/DataContext';
+import React, { useContext } from 'react'
 import { useState, useEffect } from 'react';
 
 const index = () => {
@@ -9,8 +10,10 @@ const index = () => {
  
   const [projects,setProjects]=useState([]);
   const [projectSkills,setProjectsSkills]=useState([]);
+  const{navItem,handleItem}=useContext(appContext);
 
     useEffect(()=>{
+     handleItem({payload:1})
       
 
 

@@ -1,13 +1,20 @@
-import React, { createContext, useEffect, useState } from 'react'
+import React, { createContext, useEffect, useReducer, useState } from 'react'
 import supabase from './config/SupaBaseClient';
 
 export const appContext = createContext();
+export const HandleItem=(state,action)=>{
+   return action.payload;
+
+}
 
 
 export const DataContextProvider = ({ children }) => {
   const [projects,setProjects]=useState([]);
   const [projectsSkills,setProjectsSkills]=useState([]);
   const [projectsImages,setProjectsImages]=useState([]);
+
+
+
     useEffect(()=>{
         const fetchProjects= async ()=>{
             const {data,error}=await supabase
@@ -54,9 +61,11 @@ export const DataContextProvider = ({ children }) => {
         ProjectsImages();
         
     },[])
+
     useEffect(()=>{console.log(projectsImages)},[projectsImages])
+    const [navItem,handleItem]=useReducer(HandleItem,0);
    return (
-     <appContext.Provider value={{projects,projectsSkills,projectsImages}}>
+     <appContext.Provider value={{projects,projectsSkills,projectsImages,navItem,handleItem}}>
        {children}
      </appContext.Provider>
    );
