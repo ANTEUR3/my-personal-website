@@ -56,7 +56,7 @@ const index = () => {
     
     
   return (
-    <div className='relative min-h-screen w-full  dark:bg-slate-900 pt-[60px] lg:pt-[100px]' >
+    <div className='relative min-h-screen w-full  dark:bg-slate-900 pt-[60px] lg:pt-[100px] pb-[10px]' >
 
       {projects.length >0?
       <ProjectsIndex Projects={projects} projectsSkills={projectSkills} />

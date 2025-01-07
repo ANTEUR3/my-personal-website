@@ -40,7 +40,7 @@ const Project = () => {
  
 
     return (
-<div className=' p-4 bg-gray-100 lg:pt-[100px] w-full h-screen overflow-hidden   '>
+<div className=' p-4 bg-gray-100 lg:pt-[100px] w-full h-screen overflow-hidden dark:bg-slate-900   '>
             {projectDisplay ? 
                 <div >
                 
@@ -50,8 +50,8 @@ const Project = () => {
                   <ProjectImages   Images={Images} projectId={projectId} setImage={setImage} setShowImage={setShowImage} />
 
                 </div>
-                     <div className={` absolute lg:w-[600px] lg:py-[20px] border-2 rounded-xl shadow-2xl shadow-slate-700 bg-gray-100   flex flex-col justify-center items-center gap-y-4 transition-transform duration-1000  top-[50%] left-[10%] ${showImage==false?'-translate-y-[800px]  ':' -translate-y-[40%]'}`}>
-                           <img src={`/images/${projectId}/${Image.id}.png`} className={`lg:w-[400px] h-[300px] rounded-lg `} />
+                     <div className={` absolute lg:w-[600px] lg:py-[20px] border-2 rounded-xl shadow-2xl shadow-slate-700 bg-gray-100   flex flex-col justify-center items-center gap-y-4 transition-transform duration-1000  top-[50%] left-[10%] ${showImage==false?'-translate-y-[800px]  ':' -translate-y-[50%]'}`}>
+                           <img src={`/images/${projectId}/${Image.id}.png`} className={`lg:w-[450px] h-[300px] rounded-lg `} />
                   
                          <p className='text-lg text-gray-800'>{Image.Description}</p>
                          <MdCancel onClick={()=>{setShowImage(false)}} className='absolute top-2 right-2 -ranslate-x-[50%] lg:text-4xl cursor-pointer hover:text-red-600'/>

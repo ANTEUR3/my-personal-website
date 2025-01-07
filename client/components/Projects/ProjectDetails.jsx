@@ -17,20 +17,20 @@ const ProjectDetails = ({project,projectSkills,showImage}) => {
   return (
     <div className={`px-3 w-[70%] ${showImage==true?'opacity-5':'opacity-100'} `}>
       <div className='w-full  border-b-[0.7px] border-gray-300 flex flex-col justify-start items-start gap-y-2 pt-2 pb-5 '>
-        <h1 className='font-bold text-3xl'>{project.Name}</h1>
-        <h1 className=' text-gray-800'>{project.Title}</h1>
+        <h1 className='font-bold text-3xl dark:text-white'>{project.Name}</h1>
+        <h1 className=' text-gray-800 dark:text-white'>{project.Title}</h1>
       </div>
       <div className='w-full  border-b-2 border-gray-300 flex flex-col justify-start items-start gap-y-2 py-[25px]  '>
-        <h1 className='font-bold text-3xl'>About {project.Name}</h1>
-        <h1 className=' text-gray-800'>{project.Description}</h1>
+        <h1 className='font-bold text-3xl dark:text-white'>About {project.Name}</h1>
+        <h1 className=' text-gray-800 dark:text-white'>{project.Description}</h1>
       </div>
       <div className='w-full  border-b-2 border-gray-300 flex flex-col justify-start items-start gap-y-2 py-[25px]  '>
-        <h1 className='font-bold text-3xl'>Features of {project.Name}</h1>
-        <h1 className=' text-gray-800'>{project.Description}</h1>
+        <h1 className='font-bold text-3xl dark:text-white'>Features of {project.Name}</h1>
+        <h1 className=' text-gray-800 dark:text-white'>{project.Description}</h1>
       </div>
       <div className='w-full   flex  justify-between items-end  py-[25px]  '>
         <div className='flex flex-col justify-start items-start gap-y-2 w-[50%]'>
-        <h1 className='font-bold text-3xl'>Skills of {project.Name}</h1>
+        <h1 className='font-bold text-3xl dark:text-white'>Skills used in {project.Name}</h1>
         <div className='flex justify-start items-center gap-x-3 pt-1  w-full'>{Skills}</div>
         
         </div>
