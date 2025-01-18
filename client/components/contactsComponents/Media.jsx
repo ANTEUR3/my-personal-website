@@ -9,12 +9,12 @@ import Link from 'next/link';
 
 const Media = () => {
   return (
-    <div className='w-[28%] h-full px-7 pt-5 flex flex-col justify-start items-start  gap-y-10  rounded-tl-xl rounded-bl-xl'>
+    <div className='w-[28%] h-full px-7 pt-5 flex flex-col justify-start items-start  gap-y-5  rounded-tl-xl rounded-bl-xl '>
         <div className='flex justify-start items-center gap-x-3'>
             <IoIosContacts className='text-2xl font-bold text-gray-800'/>
             <p className='text-lg font-bold text-gray-800'>Contacts</p>
         </div>
-        <div className='flex flex-col justify-start items-start gap-y-7'>
+        <div className='flex flex-col justify-start items-start gap-y-1 '>
         <Link href='/' className='flex justify-start items-start gap-x-3 hover:bg-slate-300 cursor-pointer px-2 py-2 rounded-lg'>
             <HiOutlineMail className='text-2xl'/>
           <div className='flex flex-col justify-start items-start gap-y-[0.5px]'>
@@ -43,6 +43,11 @@ const Media = () => {
 
         </Link>
         
+        </div>
+        <div className='w-full px-2 py-2  flex justify-start items-center gap-x-5 pt-5 '>
+          <LuGithub className='text-2xl'/>
+          <FaLinkedin className='text-2xl'/>
+          <MdEmail className='text-2xl'/>
         </div>
        
     </div>
